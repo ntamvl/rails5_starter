@@ -113,9 +113,9 @@ end
 NOTE:
 On Rails 5.1, I needed to change this line:
 ```
-user = User.fromomniauth(env["omniauth.auth"])
+user = User.from_omniauth(env["omniauth.auth"])
 to:
-user = User.fromomniauth(request.env["omniauth.auth"])
+user = User.from_omniauth(request.env["omniauth.auth"])
 ```
 
 Next, lets modify our application layout and add a sign in/sign out link. Open your application layout and modify it so that it looks like the code listed below.
