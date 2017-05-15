@@ -144,9 +144,3 @@ Next, lets modify our application layout and add a sign in/sign out link. Open y
   </body>
 ```
 
-*I have referenced from:*
-```
-https://richonrails.com/articles/google-authentication-in-ruby-on-rails/
-http://willschenk.com/setting-up-devise-with-twitter-and-facebook-and-other-omniauth-schemes-without-email-addresses/
-```
-
