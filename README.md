@@ -32,7 +32,18 @@ GoogleAuthExample::Application.routes.draw do
 end
 ```
 
-Add gem 'omniauth-google-oauth2' to Gemfile and edit `config/initializers/omniauth.rb`:
+Add `gem 'omniauth-google-oauth2'` to Gemfile:
+```ruby
+#...
+gem 'omniauth-google-oauth2'
+#...
+```
+Don't forget run:
+```
+bundle install
+```
+
+And edit `config/initializers/omniauth.rb`:
 ```ruby
 # config/initializers/omniauth.rb:
 OmniAuth.config.logger = Rails.logger
@@ -100,7 +111,7 @@ end
 ```
 
 NOTE:
-For me, on Rails 5.1, I needed to change this line:
+On Rails 5.1, I needed to change this line:
 ```
 user = User.fromomniauth(env["omniauth.auth"])
 to:
