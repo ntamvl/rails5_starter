@@ -20,7 +20,9 @@ rails g controller Sessions create destroy
 Now we need to set up a few routes. Modify your routes file so that it looks like the code listed below.
 ```ruby
 # config/routes.rb:
-GoogleAuthExample::Application.routes.draw do
+Rails.application.routes.draw do
+  # ...
+
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
@@ -29,6 +31,8 @@ GoogleAuthExample::Application.routes.draw do
   resource :home, only: [:show]
 
   root to: "home#show"
+
+  # ...
 end
 ```
 
